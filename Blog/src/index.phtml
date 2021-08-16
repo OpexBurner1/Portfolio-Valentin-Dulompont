@@ -1,0 +1,24 @@
+<!-- Page d'accueil -->
+<h2><i class="fa fa-home"></i> Accueil</h2>
+
+<!-- Liste des articles du blog -->
+<ul class="post-list">
+    <?php foreach($articles as $article): ?>
+        <li class="post">
+            <h3>
+                <i class="fa fa-hand-o-right"></i>&nbsp;
+                <!-- Lien vers article de blog détaillé avec les commentaires -->
+                <a href="show_post.php?id=<?= $article['number'] ?>" title="Consulter l'article">
+                    <?= $article['title'] ?>
+                <!-- Titre du post ici -->
+                </a>
+            </h3>
+            <!-- Seul un extrait de l'article du blog est affiché -->
+            <article><?= $article['content'] ?></article>
+            <small>
+                Rédigé par <?= $article['firstName'] . $article['lastName'] ?>
+                le <?= $article['date'] ?>
+            </small>
+        </li>
+    <?php endforeach; ?>
+</ul>
