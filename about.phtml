@@ -1,0 +1,73 @@
+<header>
+    <h1>Portfolio</h1>
+    <nav>
+        <a href="index.php">Sommaire</a>
+        <a href='about.php' class="current">à propos</a>
+        <?php foreach($articles as $article): ?>
+            <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
+        <?php endforeach; ?>
+        <a href='contact.php'>Me contacter</a>
+    </nav>
+</header>
+<main class="container about">
+    <section class="about">
+        <article id="who">
+            <h3>Qui suis-je?</h3>
+            <p>Je suis un jeune étudiant de 22 ans en développement Web à la recherche d'une alternance.</p>
+            <p>Après plusieurs années à travailler divers langages en autodidacte, ou à l'université, j'ai décidé d'intégrer la formation Développeur Web auprès de la 3WAcademy.<br>
+            J'ai donc postulé pour tenter le <a href="https://www.3wrh.fr/" target="_blank">Concours qui casse les codes de la 3WRH</a>
+            Après avoir passé des tests de logique et ai réalisé le "mois zéro" en une semaine, pour débuter la véritable formation le 21 Juin 2021.</p>
+            <p>La formation initiale se terminant en Septembre 2021, je souhaite intégrer une entreprise en tant qu'apprenti pour réaliser la formation Développeur FullStack en alternance.</p>
+        </article>
+        <article id='formation'>
+            <h3>La formation</h3>
+            <p>Ma formation se déroule en téléprésentiel, chaque jour de 9h à 17h. Nous avons deux formateurs qui nous accompagnent du début à la fin: un formateur d'intégration web, et un formateur de développement web.</p>
+            <ul>
+                <li>Intégration: HTML, CSS, images adaptatives, responsive Web Design, Wordpress...</li>
+                <li>Développement: JavaScript, manipulation du DOM, canvas, JQuery, PHP, programmation orientée objet (pour JS et PHP), SQL, mySQL...</li>
+                <li>Utilisation de Git</li>
+                <li>Plus de détails <a href="https://3wa.fr/formations/developpeur-web-php/formation-developpeur-integrateur-en-realisation-web/" target="_blank">ici</a>.</li>
+            </ul>
+        </article>
+        <article id="alternance">
+            <h3>L'alternance</h3>
+            <p>Voici les modalités de l'alternance (-26 ans) que je recherche:</p>
+            <ul>
+                <li>Contrat d'apprentissage OU contrat de professionnalisation</li>
+                <li>Apprentissage éligible à l'aide exceptionnelle de 8 000€, plus de détails <a href="https://drive.google.com/file/d/1To38zf89c0Tuvg6tCS9d7HVYYM6hVMYP/view" target="_blank">ici</a>
+                <li>Rythme: 3 semaines en entreprise / 1 semaine d'école</li>
+                <li>Localisation: Métropole Lilloise (59), Amiens (80), St-Quentin (02)</li>
+                <li>Programme de cours: <a href="https://drive.google.com/file/d/1M2v6PNE4Phz63kuoncyYSnFuRSq03-Ny/view" target="_blank">ici</a></li> 
+            </ul>
+        </article>
+        <article id="points">
+            <h3>Mes points forts</h3>
+            <p>Vous devez vous demander, <q>"Pourquoi vous choisir vous, plutôt que quelqu'un d'autre? Vous n'avez pas d'expérience professionnelle en développement web jusqu'à présent!"</q></p>
+            <p>Je pense que mon principal point fort est ma motivation à toute épreuve. Comme indiqué plus haut, je suis passé par Le Concours qui Casse les Codes afin de commencer ma formation auprès de la 3WAcademy.
+                Cela signifie qu'avant de débuter, j'ai dû passer des tests, réaliser une initiation au HTML, au CSS, au JavaScript et au PHP, et prendre part à un entretien avec des responsables de l'école.
+            </p>
+            <p>Ce faisant, la 3WAcademy nous dispense de frais de formation. Ils ont eu un gage de capacité, d'intérêt, et de motivation. Donc pourquoi pas vous?</p>
+            <p><br>De plus j'ai d'ores et déjà travaillé plusieurs langages de programmation, que voici:</p>
+            <ul>
+                <li>C</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Scala</li>
+            </ul>
+            <p>Il s'agit selon moi d'un gage de passion et de capacités. Si vous décidez de me recruter, vous savez que je suis prêt à travailler sur mon temps libre pour combler d'éventuelles lacunes technologiques, et vous avez la certitude que je ne déciderai pas d'arrêter, bien au contraire.</p>
+        </article>
+    </section>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#who">Qui suis-je?</a></li>
+                <li><a href="#formation">La formation</a></li>
+                <li><a href="#alternance">L'alternance</a></li>
+                <li><a href="#points">Mes points forts</a></li>
+            </ul>
+        </nav>   
+    </aside>
+</main>
+<footer>
+
+</footer>

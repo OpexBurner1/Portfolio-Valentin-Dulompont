@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Contact</title>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="index.php">Sommaire</a>
+            <a href='about.php'>à propos</a>
+            <?php foreach($articles as $article): ?>
+                <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
+            <?php endforeach; ?>
+            <a href='contact.php' class="current">Me contacter</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulaire de contact</h2>
+        <p>Veuillez remplir ce formulaire si vous souhaitez me contacter.</p>
+        <form action="contact.php" method="POST">
+            <fieldset>
+                <label for='name'>Nom :</label><br>
+                <input type="text" name="name" required><br>
+
+                <label for='email'>Email :</label><br>
+                <input type="email" name="email" required><br>
+
+                <label for='subject'>Sujet :</label><br>
+                <select name='subject'>
+                    <?php foreach($subjects as $subject): ?>
+                        <option value=<?= $subject['id'] ?>><?= $subject['subject'] ?></option>
+                    <?php endforeach; ?>
+                </select><br>
+
+                <label for='message'>Message :</label><br>
+                <textarea rows='10' cols='30' name="message"></textarea><br>
+
+                <button type='submit'>Envoyer le message</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <section id="contact">
+            <p>Me contacter:</p>
+            <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="contact.php">Me contacter par mail</a>
+        </section>
+        <p>Réalisé par Valentin Dulompont</p> 
+        
+    </footer>
+</body>
+</html>

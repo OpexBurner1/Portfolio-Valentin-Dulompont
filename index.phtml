@@ -1,0 +1,40 @@
+<header>
+    <h1>Portfolio</h1>
+    <nav>
+        <a href="index.php" class="current">Sommaire</a>
+        <a href='about.php'>à propos</a>
+        <?php foreach($articles as $article): ?>
+            <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
+        <?php endforeach; ?>
+        <a href='contact.php'>Me contacter</a>
+    </nav>
+</header>
+<main class="container">
+    <section class="intro">
+        <h2>Pourquoi ce portfolio?</h2>
+        <p>Ce présent portfolio a pour vocation d'être une vitrine de mes capacités de développeur web. Il regroupe différents projets, chacun avec ses spécificités.</p>
+        <p>Certains de mes projets sont plus axés front, d'autres plus axés back. Si vous recherchez un apprenti en back, je vous invite à vous concentrer sur les projets contenant du back et inversement.</p>
+    </section>
+    <section>
+        <?php foreach($articles as $article): ?>
+                <article class="articles">
+                    <a href="<?= $article['url'] ?>" target="_blank">
+                        <h3><?= $article['name'] ?></h3>
+                    </a>
+                    <p>
+                        <?= $article['description'] ?>
+                    </p>
+                </article>
+        <?php endforeach; ?>
+    </section>
+    
+</main>
+<footer>
+    <section id="contact">
+        <p>Me contacter:</p>
+        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="contact.php">Me contacter par mail</a>
+    </section>
+    <p>Réalisé par Valentin Dulompont</p> 
+    
+</footer>
