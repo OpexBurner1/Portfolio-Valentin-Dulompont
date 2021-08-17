@@ -18,18 +18,21 @@
             <a href='contact.php' class="current">Me contacter</a>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <h2>Formulaire de contact</h2>
         <p>Veuillez remplir ce formulaire si vous souhaitez me contacter.</p>
         <form action="contact.php" method="POST">
-            <fieldset>
-                <label for='name'>Nom :</label><br>
-                <input type="text" name="name" required><br>
+            <fieldset class="user-contact">
+                <label for='name'>Nom :</label>
+                <input type="text" name="name" required>
+            </fieldset>
+            <fieldset class="user-contact">
 
-                <label for='email'>Email :</label><br>
+                <label for='email'>Email :</label>
                 <input type="email" name="email" required><br>
-
-                <label for='subject'>Sujet :</label><br>
+            </fieldset>
+            <fieldset>
+                <label for='subject'>Sujet :</label>
                 <select name='subject'>
                     <?php foreach($subjects as $subject): ?>
                         <option value=<?= $subject['id'] ?>><?= $subject['subject'] ?></option>
@@ -47,6 +50,7 @@
         <section id="contact">
             <p>Me contacter:</p>
             <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github fa-2x"></i></a>
             <a href="contact.php">Me contacter par mail</a>
         </section>
         <p>Réalisé par Valentin Dulompont</p> 

@@ -1,141 +1,212 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     background-color: #ddd;
-    font-family:'Montserrat', sans-serif;
-    font-size:1.6rem;
-    margin:0;
-    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
 }
+
 h1,
 h2,
 h3,
-header nav{
+header nav {
     font-family: 'Oswald', sans-serif;
 }
-.container{
+
+.container {
     margin: 1em auto;
-    max-width:1400px;
+    max-width: 1400px;
 }
 
-header{
-    margin:0;
+header {
+    margin: 0;
     text-align: center;
     color:#fff;
     background-color: #333;
-    padding:1em 2em;
-    display:flex;
+    padding: 1em 2em;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header nav{
-    width:60%;
+
+header nav {
+    width: 60%;
 }
-header a{
+
+header a {
     text-decoration: none;
     text-transform: capitalize;
     color:#fff;
-    padding:1em 2em;
+    padding: 1em 2em;
     border-radius: 1em;
     transition: all 0.25s;
 }
-header a.current{
+
+header a.current {
     color:#333;
     background-color: #fff;
 }
-header a:hover{
+
+header a:hover {
     color:#333;
     background-color: #fff;
     transform: scale(1.1);
 }
-header nav{
+
+header nav {
     display: flex;
     justify-content: space-around;
 }
-article.articles{
-    margin:1em auto;
-    border:1px solid #555;
+
+article.articles {
+    margin: 1em auto;
+    border: 1px solid #555;
     border-radius: 1em;
     text-align: center;
-    width:40%;
+    width: 40%;
 }
-.container.about{
+
+.container.about {
     display: flex;
 }
-.about{
-    width:60%;
+
+.about {
+    width: 60%;
 }
+
 aside{
-    margin-left:2em;
-    position:sticky;
-    top:30%;
-    right:10%;
-    width:30%;
-    height:50%;
-    border:2px solid #333;
+    margin-left: 2em;
+    position: sticky;
+    top: 30%;
+    right: 10%;
+    width: 30%;
+    height: 50%;
+    border: 2px solid #333;
     background-color: #555;
-    color:#fff;
+    color: #fff;
 }
-aside nav{
-    display:flex;
+
+aside nav {
+    display: flex;
     flex-direction: column;
 }
-aside nav a{
-    text-decoration:none;
+
+aside nav a {
+    text-decoration: none;
     line-height: 2em;
-    color:#fff;
+    color: #fff;
 }
-aside nav a:hover{
+
+aside nav a:hover {
     text-decoration: underline;
 }
-.about article{
+
+.about article {
     margin: 1em auto;
-    border:none;
+    border: none;
 }
-.about article{
+
+.about article {
     border-bottom: 1px #000 wavy;
 }
-.about article a{
+
+.about article a {
     text-decoration: none;
     color:#000;
     font-weight: bold;
 }
 
-.about article a:hover{
+.about article a:hover {
     text-decoration: underline;
 }
-footer{
+
+footer {
+    position:relative;
+    text-align: center;
+    bottom:0;
+    padding:2em;
     color:#fff;
     background-color: #333;
 }
-footer a{
-    color:#fff;
+
+footer a {
+    color: #fff;
     text-decoration: none;
 }
 
+#contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1em 2em;
+}
+
 /* On modifie les puces des listes */
-main ul li{
+main ul li {
     margin: auto 1em;
 }
-main ul{
+
+main ul {
     list-style-type: none;
 }
-main ul li::before{
-    margin-bottom:2%;
-    margin-right:1em;
-    font-size:1rem;
+
+main ul li::before {
+    margin-bottom: 2%;
+    margin-right: 1em;
+    font-size: 1rem;
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
-    content:'\f061';
-    color:#000;
+    content: '\f061';
+    color: #000;
 }
-aside ul li::before{
-    margin-bottom:10%;
-    margin-right:1em;
-    font-size:1rem;
+
+aside ul li::before {
+    margin-bottom: 10%;
+    margin-right: 1em;
+    font-size: 1rem;
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
-    content:'\f061';
-    color:#fff;
+    content: '\f061';
+    color: #fff;
+}
+
+/* Formulaire de contact */
+form {
+    border: 1px solid #333;
+    border-radius: 2em;
+    text-align: center;
+}
+fieldset {
+    padding: 2em;
+    margin: 0.5em auto;
+    border: none;
+}
+.user-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input,
+textarea {
+    border-radius: 1em;
+}
+
+input {
+    width: 60%;
+    line-height: 1.5em;
+}
+
+textarea {
+    width: 80%;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin: 1em auto;
 }
