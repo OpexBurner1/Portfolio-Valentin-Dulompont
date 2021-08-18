@@ -1,5 +1,5 @@
 <?php
-    include './application/bdd_connection.php';
+    require './bdd_connect/connect.php';
 
     if ( !empty($admin) && ($admin)) {
         $template = 'admin';

@@ -1,8 +1,9 @@
 <?php
-    require './application/bdd_connection.php';
+    require './bdd_connect/connect.php';
 
     $id = $_GET['number'];
 
+    //On récupère les articles
     $query = $pdo->prepare
     (
         "SELECT title, content,category, date, user.firstName as firstName, user.lastName as lastName
@@ -12,10 +13,14 @@
         WHERE number = $id"
     );
 
+
+
     $query->execute();
 
     $article = $query->fetch(PDO::FETCH_OBJ);
 
+
+    //On récupère les commentaires
     $query = $pdo->prepare
     (
         "SELECT pseudo, content, comment_id

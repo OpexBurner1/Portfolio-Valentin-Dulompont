@@ -4,7 +4,7 @@
     $nickName = $_POST['nickName'];
     $contents = $_POST['contents'];
 
-    require './application/bdd_connection.php';
+    require './bdd_connect/connect.php';
 
     $query = $pdo->prepare
     (

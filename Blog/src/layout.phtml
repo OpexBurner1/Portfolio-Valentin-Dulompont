@@ -20,7 +20,11 @@
     <header class="blog-header">
         <h1><a href="index.php"><i class="fa fa-microphone"></i> Encore un Blog ?! #nonMaisAllo</a></h1>
         <nav>
-            <a href="admin.php"><i class="fa fa-cogs"></i> Administration</a>
+            <a href="login.php"><i class="fas fa-sign-in-alt"></i> Se Connecter / Déconnecter</a>
+            <?php if(!isset($_SESSION)){ session_start(); } ?>
+            <?php if(empty($_SESSION) || $_SESSION['admin'] === 0): ?>
+                <a href="admin.php"><i class="fa fa-cogs"></i> Administration</a>
+            <?php endif; ?>
         </nav>
     </header>
 
