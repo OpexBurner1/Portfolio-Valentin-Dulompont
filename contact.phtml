@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Contact</title>
-</head>
-<body>
-    <header class="header">
+<header class="header">
         <h1>Portfolio</h1>
         <nav>
             <a href="index.php">Sommaire</a>
             <a href='about.php'>À propos</a>
-            <?php foreach($articles as $article): ?>
-                <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
-            <?php endforeach; ?>
+            <a href="projets.php">Mes projets</a>
             <a href='contact.php' class="current">Me contacter</a>
         </nav>
     </header>
@@ -55,14 +44,3 @@
             </form>
         </section>
     </main>
-    <footer>
-    <p>Réalisé par Valentin Dulompont. Avec le soutien de la <a href="https://3wa.fr" target="_blank">3WAcademy</a></p>
-    <section class="contact">
-        <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
-        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-        <a href="contact.php"><i class="far fa-envelope fa-3x"></i></a>
-    </section>
-     
-</footer>
-</body>
-</html>

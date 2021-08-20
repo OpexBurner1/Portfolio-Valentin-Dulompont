@@ -23,12 +23,14 @@ body {
     color:#dae1e7
 }
 
-.header nav {
+.header nav>ul {
     display: flex;
     justify-content: space-around;
     max-width: 60%;
 }
-
+ul {
+    list-style-type: none;
+}
 .header nav a {
     margin: auto 1em;
     padding: 0.5em 1em;
@@ -110,9 +112,6 @@ main a {
 .about article h3 i {
     margin-right: 1em;
 }
-main ul li {
-    list-style-type: none;
-}
 
 main ul li::before {
     font-family: 'Font Awesome 5 Free';
@@ -123,9 +122,6 @@ main ul li::before {
     margin-right: 0.5em;
 }
 
-ul.none {
-    margin: 2em auto;
-}
 ul.none li::before {
     content:none;
 }
@@ -140,6 +136,19 @@ aside {
 
 aside a {
     margin: 0.5em auto;
+}
+
+.projets {
+    padding:2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.projets article {
+    padding: 1em;
+    border: 1px solid #dae1e7;
+    width: 24%;
+    text-align: center;
 }
 
 .contactForm {
@@ -231,6 +240,7 @@ footer a {
     padding: 1em 2em;
     margin: auto 1em;
 }
+
 
 @media screen and (max-width: 1024px) {
 
