@@ -7,11 +7,11 @@
     <title>Portfolio - Contact</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Portfolio</h1>
         <nav>
             <a href="index.php">Sommaire</a>
-            <a href='about.php'>à propos</a>
+            <a href='about.php'>À propos</a>
             <?php foreach($articles as $article): ?>
                 <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
             <?php endforeach; ?>
@@ -19,42 +19,50 @@
         </nav>
     </header>
     <main class="container">
-        <h2>Formulaire de contact</h2>
-        <p>Veuillez remplir ce formulaire si vous souhaitez me contacter.</p>
-        <form action="contact.php" method="POST">
-            <fieldset class="user-contact">
-                <label for='name'>Nom :</label>
-                <input type="text" name="name" required>
-            </fieldset>
-            <fieldset class="user-contact">
-
-                <label for='email'>Email :</label>
-                <input type="email" name="email" required><br>
-            </fieldset>
-            <fieldset>
-                <label for='subject'>Sujet :</label>
-                <select name='subject'>
-                    <?php foreach($subjects as $subject): ?>
-                        <option value=<?= $subject['id'] ?>><?= $subject['subject'] ?></option>
-                    <?php endforeach; ?>
-                </select><br>
-
-                <label for='message'>Message :</label><br>
-                <textarea rows='10' cols='30' name="message"></textarea><br>
-
-                <button type='submit'>Envoyer le message</button>
-            </fieldset>
-        </form>
+        <section class="contactForm">
+            <form action="contact.php" method="POST">
+                <h2 class='contactTitle'>Formulaire de contact</h2>
+                <p>Veuillez remplir ce formulaire si vous souhaitez me contacter.</p>
+                <ul class='none'>
+                    <li>
+                        <label for='name'>Nom :</label>
+                        <input type="text" name="name" id="name" required>
+                    </li>
+                    <li>
+                        <label for='email'>Email :</label>
+                        <input type="email" name="email" id ="email" required>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                        <label for='subject'>Sujet :</label>
+                        <select name='subject' id='subject'>
+                            <?php foreach($subjects as $subject): ?>
+                                <option value=<?= $subject['id'] ?>><?= $subject['subject'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </li>
+                    <li>
+                        <label for='message'>Message :</label><br>
+                    </li>
+                    <li>
+                        <textarea rows='10' cols='30' name="message" id="message"></textarea>
+                    </li>
+                    <li>
+                        <button type='submit' class='send'>Envoyer le message</button>
+                    </li>
+                </ul>     
+            </form>
+        </section>
     </main>
     <footer>
-        <section id="contact">
-            <p>Me contacter:</p>
-            <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            <a href="contact.php">Me contacter par mail</a>
-        </section>
-        <p>Réalisé par Valentin Dulompont</p> 
-        
-    </footer>
+    <p>Réalisé par Valentin Dulompont. Avec le soutien de la <a href="https://3wa.fr" target="_blank">3WAcademy</a></p>
+    <section class="contact">
+        <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+        <a href="contact.php"><i class="far fa-envelope fa-3x"></i></a>
+    </section>
+     
+</footer>
 </body>
 </html>

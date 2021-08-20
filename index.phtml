@@ -1,41 +1,43 @@
-<header>
-    <h1>Portfolio</h1>
+<header class="header">
+    <a href="index.php" class='title'><h1>Portfolio</h1></a>
     <nav>
         <a href="index.php" class="current">Sommaire</a>
-        <a href='about.php'>à propos</a>
+        <a href='about.php'>À propos</a>
         <?php foreach($articles as $article): ?>
             <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
         <?php endforeach; ?>
         <a href='contact.php'>Me contacter</a>
     </nav>
 </header>
-<main class="container">
+<main>
     <section class="intro">
-        <h2>Pourquoi ce portfolio?</h2>
-        <p>Ce présent portfolio a pour vocation d'être une vitrine de mes capacités de développeur web. Il regroupe différents projets, chacun avec ses spécificités.</p>
-        <p>Certains de mes projets sont plus axés front, d'autres plus axés back. Si vous recherchez un apprenti en back, je vous invite à vous concentrer sur les projets contenant du back et inversement.</p>
+        <article>
+            <h2>Pourquoi ce portfolio?</h2>
+            <p>Ce présent portfolio a pour vocation d'être une vitrine de mes capacités de développeur web. Il regroupe différents projets, chacun avec ses spécificités.</p>
+            <p>Certains de mes projets sont plus axés front, d'autres plus axés back. Si vous recherchez un apprenti en back, je vous invite à vous concentrer sur les projets contenant du back et inversement.</p>
+        </article>
+        
     </section>
-    <section>
-        <?php foreach($articles as $article): ?>
-                <article class="articles">
-                    <a href="<?= $article['url'] ?>" target="_blank">
-                        <h3><?= $article['name'] ?></h3>
-                    </a>
-                    <p>
-                        <?= $article['description'] ?>
-                    </p>
-                </article>
-        <?php endforeach; ?>
+    <section class="aboutMe">
+        <article id="who">
+            <h3>Qui suis-je?</h3>
+            <p>Je suis un jeune étudiant de 22 ans en développement Web à la recherche d'une alternance.</p>
+            <p>Après plusieurs années à travailler divers langages en autodidacte, ou à l'université, j'ai décidé d'intégrer la formation Développeur Web auprès de la 3WAcademy.<br>
+            J'ai donc postulé pour tenter le <a href="https://www.3wrh.fr/" target="_blank">Concours qui casse les codes de la 3WRH</a>
+            Après avoir passé des tests de logique et ai réalisé le "mois zéro" en une semaine, pour débuter la véritable formation le 21 Juin 2021.</p>
+            <p>La formation initiale se terminant en Septembre 2021, je souhaite intégrer une entreprise en tant qu'apprenti pour réaliser la formation Développeur FullStack en alternance.</p>
+        </article>
+    </section>
+    
     </section>
     
 </main>
 <footer>
-    <section id="contact">
-        <p>Me contacter:</p>
-        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="contact.php">Me contacter par mail</a>
+<p>Réalisé par Valentin Dulompont. Avec le soutien de la <a href="https://3wa.fr" target="_blank">3WAcademy</a></p>
+    <section class="contact">
+        <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+        <a href="contact.php"><i class="far fa-envelope fa-3x"></i></a>
     </section>
-    <p>Réalisé par Valentin Dulompont</p>
-    <p>Avec le soutien de la <a href="https://3wa.fr" target="_blank">3WAcademy</a></p> 
-    
+     
 </footer>

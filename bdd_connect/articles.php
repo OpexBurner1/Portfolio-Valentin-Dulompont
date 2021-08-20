@@ -1,4 +1,5 @@
 <?php
+try{
     $pdo = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root', '');
     $pdo->exec("SET NAMES UTF8");
     $query = $pdo->prepare
@@ -9,4 +10,8 @@
     );
     $query->execute();
     $articles = $query->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $e){
+
+}
+    
 ?>

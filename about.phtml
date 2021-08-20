@@ -1,36 +1,39 @@
-<header>
+<header class="header">
     <h1>Portfolio</h1>
     <nav>
         <a href="index.php">Sommaire</a>
-        <a href='about.php' class="current">à propos</a>
+        <a href='about.php' class="current">À propos</a>
         <?php foreach($articles as $article): ?>
             <a href="<?= $article['url'] ?>" target="_blank"><?= $article['name'] ?></a>
         <?php endforeach; ?>
         <a href='contact.php'>Me contacter</a>
     </nav>
 </header>
-<main class="container about">
+<main class="flex">
     <section class="about">
-        <article id="who">
-            <h3>Qui suis-je?</h3>
-            <p>Je suis un jeune étudiant de 22 ans en développement Web à la recherche d'une alternance.</p>
-            <p>Après plusieurs années à travailler divers langages en autodidacte, ou à l'université, j'ai décidé d'intégrer la formation Développeur Web auprès de la 3WAcademy.<br>
-            J'ai donc postulé pour tenter le <a href="https://www.3wrh.fr/" target="_blank">Concours qui casse les codes de la 3WRH</a>
-            Après avoir passé des tests de logique et ai réalisé le "mois zéro" en une semaine, pour débuter la véritable formation le 21 Juin 2021.</p>
-            <p>La formation initiale se terminant en Septembre 2021, je souhaite intégrer une entreprise en tant qu'apprenti pour réaliser la formation Développeur FullStack en alternance.</p>
+        <article id="parcours">
+            <h3><i class="fas fa-map"></i>Mon parcours</h3>
+            <p>Après avoir obtenu mon bac, et malgré mon appétence pour le développement, je me suis orienté en licence de mathématiques.
+                Mon objectif était d'obtenir un doctorat et de devenir enseignant-chercheur en mathématiques.
+            </p>
+            <p>J'ai eu l'occasion de suivre des cours d'informatique, et de découvrir la programmation orientée objet, la programmation fonctionnelle, la notion de complexité informatique...</p>
+            <p>Pour des raisons personnelles, j'ai décidé d'abandonner ces études, et d'intégrer la formation Intégrateur-Développeur Web de la 3WAcademy, et de réaliser une alternance pour devenir Développeur FullStack.</p>
         </article>
+        <div></div>
         <article id='formation'>
-            <h3>La formation</h3>
+            <h3><i class="fas fa-book-open"></i>La formation</h3>
             <p>Ma formation se déroule en téléprésentiel, chaque jour de 9h à 17h. Nous avons deux formateurs qui nous accompagnent du début à la fin: un formateur d'intégration web, et un formateur de développement web.</p>
             <ul>
                 <li>Intégration: HTML, CSS, images adaptatives, responsive Web Design, Wordpress...</li>
                 <li>Développement: JavaScript, manipulation du DOM, canvas, JQuery, PHP, programmation orientée objet (pour JS et PHP), SQL, mySQL...</li>
                 <li>Utilisation de Git</li>
+                <li>Initiation à Symphony</li>
                 <li>Plus de détails <a href="https://3wa.fr/formations/developpeur-web-php/formation-developpeur-integrateur-en-realisation-web/" target="_blank">ici</a>.</li>
             </ul>
         </article>
+        <div></div>
         <article id="alternance">
-            <h3>L'alternance</h3>
+            <h3><i class="fas fa-keyboard"></i>L'alternance</h3>
             <p>Voici les modalités de l'alternance (-26 ans) que je recherche:</p>
             <ul>
                 <li>Contrat d'apprentissage OU contrat de professionnalisation</li>
@@ -40,9 +43,15 @@
                 <li>Programme de cours: <a href="https://drive.google.com/file/d/1M2v6PNE4Phz63kuoncyYSnFuRSq03-Ny/view" target="_blank">ici</a></li> 
             </ul>
         </article>
+        <div></div>
+        <article id="next">
+            <h3><i class="fas fa-map-signs"></i>Par la suite</h3>
+            <p>Après mon alternance j'envisage de poursuivre afin de devenir Data Analyst ou Concepteur Développeur d'Applications.</p>
+        </article>
+        <div></div>
         <article id="points">
-            <h3>Mes points forts</h3>
-            <p>Vous devez vous demander, <q>"Pourquoi vous choisir vous, plutôt que quelqu'un d'autre? Vous n'avez pas d'expérience professionnelle en développement web jusqu'à présent!"</q></p>
+            <h3><i class="fas fa-plus"></i>Mes points forts</h3>
+            <p>Vous devez vous demander, <q>Pourquoi vous choisir vous, plutôt que quelqu'un d'autre? Vous n'avez pas d'expérience professionnelle en développement web jusqu'à présent!</q></p>
             <p>Je pense que mon principal point fort est ma motivation à toute épreuve. Comme indiqué plus haut, je suis passé par Le Concours qui Casse les Codes afin de commencer ma formation auprès de la 3WAcademy.
                 Cela signifie qu'avant de débuter, j'ai dû passer des tests, réaliser une initiation au HTML, au CSS, au JavaScript et au PHP, et prendre part à un entretien avec des responsables de l'école.
             </p>
@@ -56,18 +65,37 @@
             </ul>
             <p>Il s'agit selon moi d'un gage de passion et de capacités. Si vous décidez de me recruter, vous savez que je suis prêt à travailler sur mon temps libre pour combler d'éventuelles lacunes technologiques, et vous avez la certitude que je ne déciderai pas d'arrêter, bien au contraire.</p>
         </article>
+        <div></div>
+        <article id="hobby">
+            <h3><i class="fas fa-heart"></i>Mes passions</h3>
+            <p>En dehors du développement, que je continue sur mon temps libre, j'ai de nombreux passe-temps:</p>
+            <ul>
+                <li>jeux-vidéos</li>
+                <li>musique (je pratique la guitare électrique)</li>
+                <li>lecture</li>
+                <li>sortir avec des amis</li>
+                <li>étudier les sciences en autodidacte</li>
+            </ul>
+        </article>
     </section>
     <aside>
         <nav>
             <ul>
-                <li><a href="#who">Qui suis-je?</a></li>
+                <li><a href="#parcours">Mon parcours</li>
                 <li><a href="#formation">La formation</a></li>
                 <li><a href="#alternance">L'alternance</a></li>
                 <li><a href="#points">Mes points forts</a></li>
+                <li><a href="#hobby">Mes passions</a></li>
             </ul>
         </nav>   
     </aside>
 </main>
 <footer>
-
+<p>Réalisé par Valentin Dulompont. Avec le soutien de la <a href="https://3wa.fr" target="_blank">3WAcademy</a></p>
+    <section class="contact">
+        <a href="https://github.com/OpexBurner1" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+        <a href="linkedin.com/in/valentin-dulompont-17978a216" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+        <a href="contact.php"><i class="far fa-envelope fa-3x"></i></a>
+    </section>
+     
 </footer>
