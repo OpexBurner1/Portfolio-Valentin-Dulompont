@@ -11,13 +11,25 @@
     
     $query = $pdo->prepare(
         'SELECT productName, priceEach, quantityOrdered, priceEach * quantityOrdered as total 
-        FROM orderDetails INNER JOIN products 
-        ON orderDetails.productCode = products.productCode 
-        WHERE orderNumber = 10100 ');
+        FROM orderdetails INNER JOIN products 
+        ON orderdetails.productCode = products.productCode 
+        WHERE orderNumber = ? ');
 
-    $query->execute();
+    $query->execute([$orderNumber]);
 
     $order = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+    $query = $pdo->prepare
+        (
+            "SELECT customerName, contactLastName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, city, state, postalCode, country
+            FROM customers
+            INNER JOIN orders
+            ON customers.customerNumber = orders.customerNumber
+            WHERE orderNumber = ?"
+        );
+    
+    $query->execute([$orderNumber]);
 
+    $customer = $query->fetch(PDO::FETCH_ASSOC);
     require './order-form.phtml';
  ?>

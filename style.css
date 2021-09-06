@@ -155,12 +155,16 @@ aside a {
 
 .projets article {
     margin: 1em auto;
-    padding: 1em;
+    padding: 2em;
     border: 1px solid #dae1e7;
     border-radius: 1em;
     width: 24%;
     text-align: center;
     background-color: #142850;
+}
+
+.projets article img {
+    margin:1em auto;
 }
 
 .contactForm {

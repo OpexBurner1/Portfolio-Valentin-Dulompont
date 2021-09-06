@@ -13,17 +13,27 @@
 
         <!-- Etiquette avec fiche client -->
         <article class="order-form-customer">
-            <h2></h2>
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <p></p>
+            <h2>
+                <?= $customer['customerName'] ?>
+            </h2>
+            <h3>
+                <?= $customer['contactLastName'] . ' ' . $customer['contactFirstName'] ?>
+            </h3>
+            <p>
+                <?= $customer['phone'] ?>
+            </p>
+            <p>
+                <?= $customer['addressLine1'] . ' ' . $customer['addressLine2'] . ', ' . $customer['postalCode'] . ' ' . $customer['city'] ?>
+            </p>
+            <p>
+                <?= $customer['state']. ' ' . $customer['country'] ?>
+            </p>
         </article>
         <hr>
 
         <!-- Le bon de commande -->
         <table class="standard-table">
-            <caption>Bon de commande n° </caption>
+            <caption>Bon de commande n°<?= $orderNumber ?> </caption>
             <thead>
                 <tr>
                     <th>Produit</th>
@@ -36,25 +46,39 @@
             <tfoot>
                 <tr>
                     <th colspan="3">Montant Total HT</th>
-                    <th> €</th>
+                    <?php 
+                        $sumTot = 0; 
+                        foreach($order as $detail):
+                            $sumTot += $detail['total'];
+                        endforeach;
+                    ?>
+                    <th> <?= $sumTot ?>€</th>
                 </tr>
                 <tr>
                     <th colspan="3">TVA (20 %)</th>
-                    <th> €</th>
+                    <th> <?= round($sumTot / 20, 2)?>€</th>
                 </tr>
                 <tr>
                     <th colspan="3">Montant Total TTC</th>
                     
-                    <th> €</th>
+                    <th> <?= round($sumTot + $sumTot/20, 2)?>€</th>
                 </tr>
             </tfoot>
             <tbody>
                 <?php foreach($order as $detail): ?>
                     <tr>
-                        <td><?= $detail['productName'] ?></td>
-                        <td class="money-column"><?= $detail['priceEach'] ?>€</td>
-                        <td><?= $detail['quantityOrdered'] ?></td>
-                        <td class="money-column"><?= $detail['priceEach']*$detail['quantityOrdered']?> €</td>
+                        <td>
+                            <?= $detail['productName'] ?>
+                        </td>
+                        <td class="money-column">
+                            <?= $detail['priceEach'] ?>€
+                        </td>
+                        <td>
+                            <?= $detail['quantityOrdered'] ?>
+                        </td>
+                        <td class="money-column">
+                            <?= $detail['priceEach']*$detail['quantityOrdered']?> €
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
