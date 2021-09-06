@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <h1>Client n°<?= $customerNumber ?></h1>
+
+        <!-- Etiquette avec fiche client -->
+        <article class="order-form-customer">
+            <h2>
+                <?= $customer['customerName'] ?>
+            </h2>
+            <h3>
+                <?= $customer['contactLastName'] . ' ' . $customer['contactFirstName'] ?>
+            </h3>
+            <p>
+                <?= $customer['phone'] ?>
+            </p>
+            <p>
+                <?= $customer['addressLine1'] . ' ' . $customer['addressLine2'] . ', ' . $customer['postalCode'] . ' ' . $customer['city'] ?>
+            </p>
+            <p>
+                <?= $customer['state']. ' ' . $customer['country'] ?>
+            </p>
+        </article>
+        <hr>
+
+        <!-- Tableau des commandes -->
+        <table class="standard-table">
+            <caption>Historique des commandes</caption>
+            <thead>
+                <tr>
+                    <th>Numéro de commande</th>
+                    <th>Date de commande</th>
+                    <th>Date d'envoi</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($orders as $order): ?>
+                    <tr>
+                        <td>
+                            <?= $order['orderNumber'] ?>
+                        </td>
+                        <td>
+                            <?= $order['orderDate'] ?>
+                        </td>
+                        <td>
+                            <?= $order['shippedDate'] ?>
+                        </td>
+                        <td>
+                            <?= $order['status'] ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -4,7 +4,7 @@ try{
     $pdo->exec("SET NAMES UTF8");
     $query = $pdo->prepare
     (
-        "SELECT id, name, description, url
+        "SELECT id, name, description, url, img_url
         FROM page
         ORDER BY id DESC"
     );

@@ -8,7 +8,6 @@
     require './bdd.php';
  
     $orderNumber = $_GET['orderNumber'];
-    echo $orderNumber;
     
     $query = $pdo->prepare(
         'SELECT productName, priceEach, quantityOrdered, priceEach * quantityOrdered as total 

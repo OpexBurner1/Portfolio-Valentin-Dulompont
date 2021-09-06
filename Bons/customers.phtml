@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <h1>Clients</h1>
+
+        <table class="standard-table">
+            <caption>Liste des clients correspondants à la recherche</caption>
+            <thead>
+                <tr>
+                    <th>Numéro de client</th>
+                    <th>Nom du client</th>
+                    <th>Nom de famille du contact</th>
+                    <th>Prénom du contact</th>
+                    <th>Pays</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($customers as $customer): ?>
+                    <tr>
+                        <td>
+                            <a href="customer.php?customerNumber=<?= $customer['customerNumber'] ?>">
+                                <?= $customer['customerNumber'] ?>    
+                            </a>
+                        </td>
+                        <td>
+                            <?= $customer['customerName'] ?>
+                        </td>
+                        <td>
+                            <?= $customer['contactLastName'] ?>
+                        </td>
+                        <td>
+                            <?= $customer['contactFirstName'] ?>
+                        </td>
+                        <td>
+                            <?= $customer['country'] ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
