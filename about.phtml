@@ -1,26 +1,39 @@
 <header class="header">
-    <h1>Portfolio</h1>
+    <a href="index.php" class='title'><h1>Portfolio Dulompont</h1><p>Développeur Web</p></a>
     <nav>
         <a href="index.php">Accueil</a>
         <a href='about.php' class="current">À propos</a>
         <a href="projets.php">Mes projets</a>
-        <a href='contact.php'>Me contacter</a>
     </nav>
+    <div>
+        <a href="contact.php" class="contactBut">Me contacter</a>
+    </div>
 </header>
-<main class="flex">
-    <section class="about">
-        <article id="parcours">
-            <h3><i class="fas fa-map"></i>Mon parcours</h3>
+<main class="aboutContainer">
+    <aside id="access">
+        <h2>Menu d'accessibilité</h2>
+        <nav>
+            <ul>
+                <li><a href="#parcours">Mon parcours</li>
+                <li><a href="#formation">La formation</a></li>
+                <li><a href="#alternance">L'alternance</a></li>
+                <li><a href="#points">Mes points forts</a></li>
+                <li><a href="#hobby">Mes passions</a></li>
+            </ul>
+        </nav>   
+    </aside>
+    <section>
+        <article class='about' id="parcours">
+            <h2><i class="fas fa-map"></i>Mon parcours</h2>
             <p>Après avoir obtenu mon bac, et malgré mon appétence pour le développement, je me suis orienté en licence de mathématiques.
                 Mon objectif était d'obtenir un doctorat et de devenir enseignant-chercheur en mathématiques.
             </p>
             <p>J'ai eu l'occasion de suivre des cours d'informatique, et de découvrir la programmation orientée objet, la programmation fonctionnelle, la notion de complexité informatique...</p>
             <p>Pour des raisons personnelles, j'ai décidé d'abandonner ces études, et d'intégrer la formation Intégrateur-Développeur Web de la 3WAcademy, et de réaliser une alternance pour devenir Développeur FullStack.</p>
         </article>
-        <div></div>
-        <article id='formation'>
-            <h3><i class="fas fa-book-open"></i>La formation</h3>
-            <p>Ma formation se déroule en téléprésentiel, chaque jour de 9h à 17h. Nous avons deux formateurs qui nous accompagnent du début à la fin: un formateur d'intégration web, et un formateur de développement web.</p>
+        <article class='about' id='formation'>
+            <h2><i class="fas fa-book-open"></i>La formation</h2>
+            <p>Ma formation s'est déroulée en téléprésentiel, chaque jour de 9h à 17h. Nous avions deux formateurs qui nous accompagnaient du début à la fin: un formateur d'intégration web, et un formateur de développement web.</p>
             <ul>
                 <li>Intégration: HTML, CSS, images adaptatives, responsive Web Design, Wordpress...</li>
                 <li>Développement: JavaScript, manipulation du DOM, canvas, JQuery, PHP, programmation orientée objet (pour JS et PHP), SQL, mySQL...</li>
@@ -29,26 +42,23 @@
                 <li>Plus de détails <a href="https://3wa.fr/formations/developpeur-web-php/formation-developpeur-integrateur-en-realisation-web/" target="_blank">ici</a>.</li>
             </ul>
         </article>
-        <div></div>
-        <article id="alternance">
-            <h3><i class="fas fa-keyboard"></i>L'alternance</h3>
+        <article class="about" id="alternance">
+            <h2><i class="fas fa-keyboard"></i>L'alternance</h2>
             <p>Voici les modalités de l'alternance (-26 ans) que je recherche:</p>
             <ul>
                 <li>Contrat d'apprentissage OU contrat de professionnalisation</li>
                 <li>Apprentissage éligible à l'aide exceptionnelle de 8 000€, plus de détails <a href="https://drive.google.com/file/d/1To38zf89c0Tuvg6tCS9d7HVYYM6hVMYP/view" target="_blank">ici</a>
                 <li>Rythme: 3 semaines en entreprise / 1 semaine d'école</li>
-                <li>Localisation: Métropole Lilloise (59), Amiens (80), St-Quentin (02)</li>
+                <li>Localisation: Métropole Lilloise (59)</li>
                 <li>Programme de cours: <a href="https://drive.google.com/file/d/1M2v6PNE4Phz63kuoncyYSnFuRSq03-Ny/view" target="_blank">ici</a></li> 
             </ul>
         </article>
-        <div></div>
-        <article id="next">
-            <h3><i class="fas fa-map-signs"></i>Par la suite</h3>
+        <article class='about' id="next">
+            <h2><i class="fas fa-map-signs"></i>Par la suite</h2>
             <p>Après mon alternance j'envisage de poursuivre afin de devenir Data Analyst ou Concepteur Développeur d'Applications.</p>
         </article>
-        <div></div>
-        <article id="points">
-            <h3><i class="fas fa-plus"></i>Mes points forts</h3>
+        <article class="about" id="points">
+            <h2><i class="fas fa-plus"></i>Mes points forts</h2>
             <p>Vous devez vous demander, <q>Pourquoi vous choisir vous, plutôt que quelqu'un d'autre? Vous n'avez pas d'expérience professionnelle en développement web jusqu'à présent!</q></p>
             <p>Je pense que mon principal point fort est ma motivation à toute épreuve. Comme indiqué plus haut, je suis passé par Le Concours qui Casse les Codes afin de commencer ma formation auprès de la 3WAcademy.
                 Cela signifie qu'avant de débuter, j'ai dû passer des tests, réaliser une initiation au HTML, au CSS, au JavaScript et au PHP, et prendre part à un entretien avec des responsables de l'école.
@@ -63,9 +73,8 @@
             </ul>
             <p>Il s'agit selon moi d'un gage de passion et de capacités. Si vous décidez de me recruter, vous savez que je suis prêt à travailler sur mon temps libre pour combler d'éventuelles lacunes technologiques, et vous avez la certitude que je ne déciderai pas d'arrêter, bien au contraire.</p>
         </article>
-        <div></div>
-        <article id="hobby">
-            <h3><i class="fas fa-heart"></i>Mes passions</h3>
+        <article class="about" id="hobby">
+            <h2><i class="fas fa-heart"></i>Mes passions</h2>
             <p>En dehors du développement, que je continue sur mon temps libre, j'ai de nombreux passe-temps:</p>
             <ul>
                 <li>jeux-vidéos</li>
@@ -76,15 +85,5 @@
             </ul>
         </article>
     </section>
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="#parcours">Mon parcours</li>
-                <li><a href="#formation">La formation</a></li>
-                <li><a href="#alternance">L'alternance</a></li>
-                <li><a href="#points">Mes points forts</a></li>
-                <li><a href="#hobby">Mes passions</a></li>
-            </ul>
-        </nav>   
-    </aside>
+    
 </main>
