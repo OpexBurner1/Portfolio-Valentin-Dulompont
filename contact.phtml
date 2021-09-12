@@ -1,12 +1,14 @@
 <header class="header">
-        <h1>Portfolio</h1>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href='about.php'>À propos</a>
-            <a href="projets.php">Mes projets</a>
-            <a href='contact.php' class="current">Me contacter</a>
-        </nav>
-    </header>
+    <a href="index.php" class='title'><h1>Portfolio Dulompont</h1><p>Développeur Web</p></a>
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href='about.php'>À propos</a>
+        <a href="projets.php">Mes projets</a>
+    </nav>
+    <div>
+        <a href="contact.php" class="contactBut current">Me contacter</a>
+    </div>
+</header>
     <main class="container">
         <section class="contactForm">
             <form action="contact.php" method="POST">
@@ -21,8 +23,6 @@
                         <label for='email'>Email :</label>
                         <input type="email" name="email" id ="email" required>
                     </li>
-                    <li></li>
-                    <li></li>
                     <li>
                         <label for='subject'>Sujet :</label>
                         <select name='subject' id='subject'>
